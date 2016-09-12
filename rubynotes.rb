@@ -1,5 +1,5 @@
 require 'sqlite3'
-#require 'debug'
+require 'debug'
 
 #system "clear" or system "cls"
 
@@ -25,7 +25,12 @@ title = gets
 #puts "========================"
 
 puts "Content:\n(opens Vim to allow you to input large amounts of text)"  # make orange or something
-content = gets
+key_input = gets
+if key_input == "\n"
+  system("vim", "/tmp/temp_content.txt")
+  content = `less /tmp/temp_content.txt`
+  `rm /tmp/temp_content.txt`
+end
 #puts
 #puts "========================"
 
@@ -38,7 +43,7 @@ db.execute("INSERT INTO Notes VALUES(?, ?, ?)", [@null, title, content])
 noteId = db.get_first_value("SELECT last_insert_rowid()")
 
 # if tag doesnt exist, create one
-if db.execute("SELECT * FROM Tags WHERE tag_name=\'#{tag}\'") <= 0
+if db.execute("SELECT * FROM Tags WHERE tag_name=\'#{tag}\'").length <= 0
   db.execute("INSERT INTO Tags VALUES(?, ?)", [@null, tag])
   tagId = db.get_first_value("SELECT last_insert_rowid()")
 else
