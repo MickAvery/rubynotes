@@ -14,7 +14,7 @@ It also assumes that you have Vim installed and can call it from the terminal.
 
 Clone the repo...
 ```
-git clone https://github.com/MickAvery/rubynotes.git
+git clone https://github.com/MickAvery/rubynotes.git && cd ./rubynotes
 ```
 ... and install dependencies
 ```
@@ -30,3 +30,5 @@ These are my goals for this project
 - [ ] Allow user to have separate folders for notes
 - [ ] Allow user to move notes from one folder to another
 - [ ] Allow user to export notes into .txt or .md format
+- [ ] User authentication: user should enter password first before accessing notes database
+- [ ] encrypt data in database
