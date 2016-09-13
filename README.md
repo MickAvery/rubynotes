@@ -16,16 +16,20 @@ Clone the repo...
 ```
 git clone https://github.com/MickAvery/rubynotes.git && cd ./rubynotes
 ```
-... and install dependencies
+... and install dependencies ...
 ```
 bundle
+```
+... and then run the app
+```
+ruby ./rubynotes.rb
 ```
 ## Feature Checklist
 These are my goals for this project
 - [x] Initial setup: get Title, Content, and Tags from user
 - [x] Setup SQLite3 database to store notes and tags
 - [x] Allow user to save notes in database
-- [x] Parse markdown syntax from note content and display it accordingly 
+- [x] Parse markdown syntax from note content and display it accordingly
 - [ ] Setup user interface and menu
 - [ ] Allow user to have separate folders for notes
 - [ ] Allow user to move notes from one folder to another
