@@ -1,5 +1,5 @@
 # Ruby Notes
-****
+
 ## Description
 **Ruby Notes** is a terminal-based notetaking application written in Ruby during my spare time. It allows users to store tagged notes in a SQLite3 database. The application also allows users to use basic Markdown syntax (headers, lists) in the note content for a better notetaking experience.
 
@@ -29,8 +29,10 @@ These are my goals for this project
 - [x] Initial setup: get Title, Content, and Tags from user
 - [x] Setup SQLite3 database to store notes and tags
 - [x] Allow user to save notes in database
-- [x] Parse markdown syntax from note content and display it accordingly
+- [x] Integrate [curses gem](https://github.com/ruby/curses) (terminal app framework) into application
+- [ ] Parse markdown syntax from note content and display it accordingly
 - [ ] Setup user interface and menu
+- [ ] Implement better design pattern for app (maybe use MVC?)
 - [ ] Allow user to have separate folders for notes
 - [ ] Allow user to move notes from one folder to another
 - [ ] Allow user to export notes into .txt or .md format
